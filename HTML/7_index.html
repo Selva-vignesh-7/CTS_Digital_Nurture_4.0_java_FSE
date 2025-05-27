@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Community Event Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Internal CSS for welcome banner and highlight class */
+    #welcomeBanner {
+      background-color: rgba(18, 182, 233, 0.964);
+      color: rgb(5, 5, 5);
+      padding: 1em;
+      margin-bottom: 1em;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 1.2em;
+    }
+    .highlight {
+      background: #ffffff;
+      padding: 0.2em 0.5em;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    /*styles for events section */
+    #events table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #events td {
+        text-align: center;
+        vertical-align: top;  
+    }
+    .event-img {
+        border: 3px solid #2196f3;
+        border-radius: 8px;
+        margin-bottom: 0.5em;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        width: 250px;
+        height: 160px;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*styles for registration form */
+     #registrationForm {
+      max-width: 400px;
+      margin: 2em auto;
+      padding: 1.5em 2em;
+      border: 2px solid #2196f3;
+      border-radius: 10px;
+      background: #f9f9f9;
+      box-shadow: 0 4px 16px rgba(33,150,243,0.08);
+    }
+    #registrationForm label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.3em;
+      margin-top: 1em;
+      color: #222;
+    }
+    #registrationForm input,
+    #registrationForm select,
+    #registrationForm textarea {
+      width: 100%;
+      padding: 0.6em;
+      margin-bottom: 0.8em;
+      border: 1px solid #bdbdbd;
+      border-radius: 5px;
+      font-size: 1em;
+      box-sizing: border-box;
+      background: #fff;
+      transition: border-color 0.2s;
+    }
+    #registrationForm input:focus,
+    #registrationForm select:focus,
+    #registrationForm textarea:focus {
+      border-color: #2196f3;
+      outline: none;
+    }
+    #registrationForm button {
+      background: #2196f3;
+      color: #fff;
+      padding: 0.7em 2em;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      margin-top: 0.5em;
+      transition: background 0.2s;
+    }
+    #registrationForm button:hover {
+      background: #1769aa;
+    }
+    #confirmation {
+      display: block;
+      color: green;
+      font-weight: bold;
+      margin-top: 1em;
+      text-align: center;
+    }
+
+    /* Event Feedback Form Styles */
+    #feedbackForm {
+    max-width: 350px;
+    margin: 30px auto 20px auto;
+    padding: 16px;
+    border: 1px solid #2196f3;
+    border-radius: 8px;
+    background: #f2faff;
+    }
+    #feedbackForm label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    }
+    #feedbackForm input,
+    #feedbackForm select,
+    #feedbackForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    font-size: 1em;
+    }
+    #feedbackForm button {
+    background: #2196f3;
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    }
+    #feedbackForm button:hover {
+    background: #1769aa;
+    }
+    #feeDisplay {
+    display: block;
+    margin-bottom: 10px;
+    color: #1769aa;
+    font-weight: bold;
+    }
+    #charCount {
+    float: right;
+    font-size: 0.95em;
+    color: #666;
+    }
+    #confirmationMsg {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a> |
+    <a href="#events">Events</a> |
+    <a href="#contact">Contact</a> |
+    <a href="help.html" target="_blank">Help</a>
+  </nav>
+
+  <!-- Main -->
+  <main>
+    <!-- Welcome Banner -->
+    <div id="welcomeBanner">
+      Welcome, <span class="highlight">Madrid city Community!</span>
+      <span style="color: rgb(232, 9, 9); font-weight: bold;">Special Offer: Free entry for first 50 signups!</span>
+    </div>
+    <!-- Home Section -->
+    <section id="home">
+      <p class="highlight">Stay updated with the latest community events!</p>
+    </section>
+    <!-- Events Section -->
+    
+    <section id="events">
+      <h2>Past Community Events Gallery</h2>
+      <table>
+        <caption>Memorable Moments from Recent Events</caption>
+        <tr>
+          <td>
+            <img src="event1.jpg" alt="Spring Festival Parade" title="Spring Festival Parade"
+                 class="event-img" width="150" height="100">
+            <div>Spring Festival</div>
+          </td>
+          <td>
+            <img src="event2.jpg" alt="Charity Run" title="Charity Run"
+                 class="event-img" width="150" height="100">
+            <div>Charity Run</div>
+          </td>
+          <td>
+            <img src="event3.jpg" alt="Outdoor Concert" title="Outdoor Concert"
+                 class="event-img" width="150" height="100">
+            <div>Outdoor Concert</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="event4.jpg" alt="Art Workshop" title="Art Workshop"
+                 class="event-img" width="150" height="100">
+            <div>Art Workshop</div>
+          </td>
+          <td>
+            <img src="event5.jpg" alt="Food Fair" title="Food Fair"
+                 class="event-img" width="150" height="100">
+            <div>Food Fair</div>
+          </td>
+          <td>
+            <img src="event6.jpg" alt="Community Cleanup" title="Community Cleanup"
+                 class="event-img" width="150" height="100">
+            <div>Community Cleanup</div>
+          </td>
+        </tr>
+      </table>
+    </section>
+    
+      </table>
+      <!-- Event Registration Form -->
+      <h3>Register for an Upcoming Event</h3>
+      <form id="registrationForm" style="max-width:400px;margin:2em auto;padding:1em;border:1px solid #2196f3;border-radius:8px;background:#f9f9f9;">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Your full name" required autofocus style="width:100%;margin-bottom:0.8em;"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="you@email.com" required style="width:100%;margin-bottom:0.8em;"><br>
+
+        <label for="date">Event Date:</label><br>
+        <input type="date" id="date" name="date" required style="width:100%;margin-bottom:0.8em;"><br>
+
+        <label for="eventType">Event Type:</label><br>
+        <select id="eventType" name="eventType" required style="width:100%;margin-bottom:0.8em;">
+          <option value="" disabled selected>Select an event</option>
+          <option value="Spring Festival">Spring Festival</option>
+          <option value="Charity Run">Charity Run</option>
+          <option value="Outdoor Concert">Outdoor Concert</option>
+          <option value="Art Workshop">Art Workshop</option>
+          <option value="Food Fair">Food Fair</option>
+          <option value="Community Cleanup">Community Cleanup</option>
+        </select><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" placeholder="Any special requests?"  style="width:100%;margin-bottom:0.8em;"></textarea><br>
+
+        <button type="submit" style="background:#2196f3;color:#fff;padding:0.5em 1.5em;border:none;border-radius:4px;font-size:1em;cursor:pointer;">Register</button>
+        <br><br>
+        <output id="confirmation" style="display:block;color:green;font-weight:bold;"></output>
+      </form>
+      
+
+      <!-- Event Feedback Form with Event Handling -->
+        <h3>Event Feedback</h3>
+        <form id="feedbackForm">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" placeholder="e.g. 9876543210" required>
+        <span id="phoneError" style="color:red;font-size:0.95em;"></span>
+
+        <label for="eventTypeFeedback">Event Type:</label>
+        <select id="eventTypeFeedback" name="eventTypeFeedback" required>
+            <option value="" disabled selected>Select an event</option>
+            <option value="Spring Festival" data-fee="Free">Spring Festival</option>
+            <option value="Charity Run" data-fee="$10">Charity Run</option>
+            <option value="Outdoor Concert" data-fee="$15">Outdoor Concert</option>
+            <option value="Art Workshop" data-fee="$5">Art Workshop</option>
+        </select>
+        <span id="feeDisplay" style="display:block;margin-bottom:10px;color:#1769aa;font-weight:bold;"></span>
+
+        <label for="feedback">Your Feedback:</label>
+        <span id="charCount" style="float:right;font-size:0.95em;color:#666;">0/200</span>
+        <textarea id="feedback" name="feedback" maxlength="200" rows="3" placeholder="Type your feedback..." required></textarea>
+
+        <button type="button" id="feedbackSubmit">Submit Feedback</button>
+        <div id="confirmationMsg" style="color:green;font-weight:bold;text-align:center;margin-top:10px;"></div>
+        </form>
+
+        <h4 style="text-align:center;">Double-click to Enlarge Event Image</h4>
+        <img src="event1.jpg" alt="Event" id="enlargeImg" title="Double-click to enlarge"
+        style="display:block;margin:20px auto 10px auto;border:2px solid #2196f3;border-radius:8px;width:180px;height:120px;object-fit:cover;transition:transform 0.2s;cursor:pointer;">
+
+
+        <!-- Video Section -->
+        
+        <h3 style="text-align:center;">Watch Our Event Promo!</h3>
+        <div id="videoSection" style="text-align:center; margin: 30px auto;">
+        <video id="eventVideo" width="800" height="540" controls>
+            <source src="promo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="videoReadyMsg" style="color:green;font-weight:bold;margin-top:12px;"></div>
+        </div>
+      <!-- Page content for Events -->
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <!-- Page content for Contact -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Footer content -->
+  </footer>
+
+  <script>
+        document.getElementById('registrationForm').onsubmit = function(e) {
+          e.preventDefault();
+          document.getElementById('confirmation').value = "Thank you for registering! We have received your details.";
+        };
+
+        // Phone validation on blur
+        document.getElementById('phone').onblur = function() {
+            const phone = this.value.trim();
+            const error = document.getElementById('phoneError');
+            if (!/^\d{10}$/.test(phone)) {
+            error.textContent = "Enter a valid 10-digit phone number.";
+            } else {
+            error.textContent = "";
+            }
+        };
+
+        // Show event fee on dropdown change
+        document.getElementById('eventTypeFeedback').onchange = function() {
+            const fee = this.options[this.selectedIndex].getAttribute('data-fee');
+            document.getElementById('feeDisplay').textContent = fee ? "Event Fee: " + fee : "";
+        };
+
+        // Character count for textarea
+        document.getElementById('feedback').onkeyup = function() {
+            document.getElementById('charCount').textContent = this.value.length + "/200";
+        };
+
+        // Show confirmation on submit
+        document.getElementById('feedbackSubmit').onclick = function() {
+            const phoneError = document.getElementById('phoneError').textContent;
+            if (phoneError) return;
+            document.getElementById('confirmationMsg').textContent = "Thank you for your feedback!";
+            setTimeout(() => {
+            document.getElementById('confirmationMsg').textContent = "";
+            document.getElementById('feedbackForm').reset();
+            document.getElementById('feeDisplay').textContent = "";
+            document.getElementById('charCount').textContent = "0/200";
+            }, 2500);
+        };
+
+        // Double-click to enlarge image
+        document.getElementById('enlargeImg').ondblclick = function() {
+            this.style.transform = this.style.transform === "scale(1.7)" ? "" : "scale(1.7)";
+            this.style.zIndex = this.style.transform ? "10" : "";
+            this.style.borderColor = this.style.transform ? "#f44336" : "#2196f3";
+        };
+
+        // Show message when video can play
+        document.getElementById('eventVideo').oncanplay = function() {
+            document.getElementById('videoReadyMsg').textContent = "Video ready to play";
+        };
+
+        // Track if promo form is dirty
+        let promoFormDirty = false;
+        document.getElementById('promoForm').addEventListener('input', function() {
+            promoFormDirty = true;
+        });
+        document.getElementById('promoForm').addEventListener('submit', function(e) {
+            promoFormDirty = false;
+            alert("Thank you for your RSVP!");
+            e.preventDefault();
+        });
+
+        // Warn if leaving with unfinished promo form
+        window.onbeforeunload = function(e) {
+            if (promoFormDirty) {
+            return "You have not submitted your RSVP. Are you sure you want to leave?";
+            }
+        };
+      </script>
+
+</body>
+</html>
+
+
+
